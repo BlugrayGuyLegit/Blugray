@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verse connexion untraversed...</title>
+  <style>
+    body {
+      background-image: url('https://media.discordapp.net/attachments/1157426309836845056/1191711538457870456/Picsart_24-01-02_12-52-09-776.jpg?ex=65a66edb&is=6593f9db&hm=bd9029dbb747b67bcbb88f04121a86ea5be44e7fb5ac3b13a0c03e102b18a761&');
+    }
+    #console-text {
+      white-space: pre;
+      font-family: monospace;
+      background: linear-gradient(to bottom, lime, #ffff62, yellow);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<div id="console-text"></div>
+
+  >  Inline core?<br>
+
+<script>
+  console.log("login: blugrayguy@gmail.com");
+let total = 18757193;
+const speed = 10;
+let index = 1;
+let textToDisplay = `> Blugray Console\n> V74.0\n\n> Intraverse connection... \n> Connection detected \n> Connection attempt...\n> Connection successful \n  Blugray - Bleak moment\n  Apologis to Dark speaker man, PlungerMan, Multiple Cameraman, Gray Servitor (Lucky cameraman), armored cameraman and all the cameramen and speaker men who were beaten and sacrificed ♥️\n  Skibidi Toilet - End soon...\n  Skibidi toilet 71 - Soon \n  Blugray...\n  Final War - astro Toilet final war soon...\n  Titan - 3 Ready \n  Temporal error - !?\n  Dark Tie - Complete\n\n> Cameraman:\n  Total: ${formatNumber(total)} ~\n  \b Alive: 22 259 544 ~\n  \b Dead: 3 152 833 ~\n  \b Reanimated: 691 829 (Increase +)\n\n> Skibidi Toilet:\n  Total: 218\n  \b Alive: 218\n  \b Dead: ???\n\n> Connected\n\b Login as: User\n\n> Connected Channel:\n\b http://youtube.com/@BlugrayGuy\n\b https://youtube.com/@DaFuq!?Boom!\n  Objective: Given the end to the skibidi Toilet`;
+
+setInterval(() => {
+  total += 10;
+  textToDisplay = textToDisplay.replace(/Total: '[^']*'/, `Total: '${formatNumber(total)}'`);
+  console.log(`${total}`);
+}, 1000);
+
+function formatNumber(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+
+function displayText() {
+  const consoleText = document.getElementById('console-text');
+  consoleText.textContent += textToDisplay[index];
+  index++;
+
+  if (index < textToDisplay.length) {
+    setTimeout(displayText, speed);
+  }
+}
+
+displayText();
+
+</script>
+
+</body>
+</html>
