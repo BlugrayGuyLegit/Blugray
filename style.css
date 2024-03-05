@@ -72,7 +72,7 @@ a:hover {
 
 .slideshow {
       position: relative;
-      max-width: 800px;
+      max-width: 300px;
       margin: auto;
     }
 
@@ -86,11 +86,11 @@ a:hover {
     }
 
     .prose {
-      position: left;
+      position: absolute;
       bottom: 20px;
-      left: 100%;
+      left: 50%;
       transform: translateX(-50%);
-      text-align: left;
+      text-align: center;
       color: white;
     }
 
@@ -110,9 +110,8 @@ a:hover {
       background-color: blue;
       color: white;
       text-decoration: line;
-      border-radius: 50px;
+      border-radius: 5px;
       transition: background-color 0.3s ease;
-      border-color: white;
     }
 
     .prose a:hover {
