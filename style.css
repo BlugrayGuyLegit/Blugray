@@ -112,6 +112,7 @@ a:hover {
       text-decoration: none;
       border-radius: 50px;
       transition: background-color 0.3s ease;
+      border-color: white;
     }
 
     .prose a:hover {
