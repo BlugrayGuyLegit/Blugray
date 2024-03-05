@@ -13,6 +13,9 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  margin-right: auto;
+    margin-left: auto;
+    width: 900px;
 }
 
 /* Header styles */
