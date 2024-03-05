@@ -107,9 +107,9 @@ a:hover {
     .prose a {
       display: inline-block;
       padding: 10px 20px;
-      background-color: transparent;
+      background-color: blue;
       color: white;
-      text-decoration: none;
+      text-decoration: line;
       border-radius: 50px;
       transition: background-color 0.3s ease;
       border-color: white;
