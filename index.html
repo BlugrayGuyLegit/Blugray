@@ -21,6 +21,32 @@
   </header>
 
   <main>
+
+    <div class="slideshow">
+  <div class="slide">
+    <img src="image1.jpg" alt="beta">
+    <div class="prose">
+      <h2>Open now!</h2>
+      <p>Skibidi Toilet by Blugray</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="image2.jpg" alt="72">
+    <div class="prose">
+      <h2>Soon</h2>
+      <p>Skibidi Toilet 72</p>
+      <a href="about:blank">Soon</a>
+    </div>
+  </div>
+
+  <!-- more show if needed -->
+
+  <!-- Navigation controls -->
+  <a href="#" class="prev">&#10094;</a>
+  <a href="#" class="next">&#10095;</a>
+    </div>
+    
     <section>
       <h2>Document [72]</h2>
       <p>Coming soon after March 09, 2024.</p>
@@ -34,5 +60,21 @@
   </main>
   
 </body>
+<script>
+var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change l'image toutes les 2 secondes
+  }
+</script>
 
 </html>
