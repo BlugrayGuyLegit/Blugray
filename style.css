@@ -69,3 +69,51 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.slideshow {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prose {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+    }
+
+    .prose h2 {
+      font-size: 24px;
+      margin: 0 0 10px;
+    }
+
+    .prose p {
+      font-size: 18px;
+      margin: 0 0 20px;
+    }
+
+    .prose a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .prose a:hover {
+      background-color: #2980b9;
+    }
