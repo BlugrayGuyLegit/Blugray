@@ -8,8 +8,8 @@
 /* Body styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: white;
+  color: blue;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -21,10 +21,12 @@ body {
 /* Header styles */
 header {
   position: sticky;
-  background-color: #007bff;
-  color: #fff;
+  background-color: royalblue;
+  color: black;
   padding: 20px;
   text-align: center;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 header h1 {
@@ -52,11 +54,13 @@ main {
 }
 
 section {
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+  color: black;
+  border: 2px solid black;
 }
 
 section h2 {
@@ -87,6 +91,8 @@ a:hover {
     .slide img {
       width: 100%;
       height: auto;
+      border: 3px solid black;
+      border-radius: 10px
     }
 
     .prose {
