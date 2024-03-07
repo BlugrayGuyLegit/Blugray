@@ -168,3 +168,9 @@ a:hover {
   border-radius: 50px;
   text-decoration: bold;
 }
+section#about {
+  background-color: floralwhite;
+}
+section#uptitle {
+  color: darkblue;
+}
