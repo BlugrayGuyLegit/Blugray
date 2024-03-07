@@ -27,6 +27,9 @@ header {
   text-align: center;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
+  margin-right: auto;
+    margin-left: auto;
+    width: auto;
 }
 
 header h1 {
@@ -131,3 +134,37 @@ a:hover {
       border: 3px solid limegreen;
       border-radius: 10px;
     }
+    .tie {
+      margin-right: auto;
+    margin-left: auto;
+    }
+    img#tie {
+  max-width: 300px;
+  max-height: 350px;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+.floating-video {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.tie h1 {
+  color: blue;
+  text-align: center;
+}
+.tie h2 {
+  color: blue;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+.tie p {
+  color: blue;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 50px;
+  text-decoration: bold;
+}
