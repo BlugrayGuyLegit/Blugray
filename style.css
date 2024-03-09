@@ -174,3 +174,10 @@ section#about {
 section#uptitle {
   color: darkblue;
 }
+img#team {
+  max-width: 30px;
+  max-height: 30px;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
