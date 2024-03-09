@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Send Discord notification
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} # Make sure to add this secret in your repository settings
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} # Make sure to add this secret in your repository settings 
         run: |
           curl -X POST -H "Content-Type: application/json" -d '{"content": "The site has been updated or is live!"}' $DISCORD_WEBHOOK_URL
