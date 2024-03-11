@@ -1,0 +1,91 @@
+input {
+  display: inline-block;
+    padding: 10px 40px;
+    background-color: darkslategray;
+    border: 3px solid lightgray;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+}
+textarea {
+  display: inline-block;
+      padding: 30px 200px;
+      background-color: darkslategray;
+      border: 3px solid lightgray;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+      margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    text-align: left;
+    padding-left: 1%;
+    padding-top: 2%;
+}
+button {
+  display: inline-block;
+      padding: 10px 250px;
+      background-color: blue;
+      border: 3px solid lightgray;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    text-align: center;
+}
+body {
+  text-align: left;
+}
+section {
+background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: black;
+  border: 2px solid black;
+}
+header {
+  position: sticky;
+  background-color: royalblue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  margin-right: auto;
+    margin-left: auto;
+    width: auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
