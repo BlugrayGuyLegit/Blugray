@@ -89,3 +89,14 @@ nav ul li a {
 main {
   padding: 20px;
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: blue;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+    margin-left: auto;
+    width: 900px;
+}
