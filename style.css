@@ -22,7 +22,7 @@ body {
 header {
   position: sticky;
   background-color: royalblue;
-  color: black;
+  color: white;
   padding: 20px;
   text-align: center;
   border-top: 3px solid black;
@@ -180,4 +180,13 @@ img#team {
   border: 3px solid black;
   border-radius: 10px;
   text-align: center;
+}
+.story h1 {
+  border-bottom: 3px solid black;
+  margin-right: auto;
+    margin-left: auto;
+    width: auto;
+}
+.story b {
+  text-decoration: underline yellow;
 }
