@@ -23,6 +23,26 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://media.discordapp.net/attachments/1169330015423430696/1214915589861281843/Picsart_24-03-06_13-40-27-453.png?ex=65fad950&is=65e86450&hm=1f83e09bbb221e9931b5e160795adbadb060cc652ce7e46c30b42e0b0f6036ab&">
   <link rel="stylesheet" href="style.css">
+    <style>
+    .warning-box {
+      background-color: #ffe6e6;
+      border: 3px solid #ff6666;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .warning-box button {
+      border: 0.8px solid black;
+      background-color: transparent;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 5px;
+      color: blue;
+    }
+    .information {
+      border-image: linear-gradient(to right, indianred, red, darkred, red, indianred) 5;
+    }
+  </style>
 </head>
 
 <body>
@@ -38,6 +58,13 @@
   </header>
 
   <main>
+    <section class="information">
+    <h2>Important Information ⚠️</h2>
+    <div class="warning-box">
+      <p>Attention: Due to bug issues, some things have been removed from this page.</p>
+      <button onclick="warndel()">See information</button>
+    </div>
+  </section>
 <section>
   <h2>Last news</h2><br>
     <div class="slideshow">
@@ -174,15 +201,9 @@ var slideIndex = 0;
     setTimeout(showSlides, 5000);
   }
   
-if ("Notification" in window) {
-  Notification.requestPermission().then(function(permission) {
-    if (permission === "granted") {
-      var notification = new Notification("Update warning ⚠️", {
-        body: "Due to bug issues, some things have been removed"
-      });
-    }
-  });
-}
+  function warndel() {
+    alert('⚠️ Warning:\nThe section with all of ties was deleted and the logo of the website with due to some image bug.')
+  }
 </script>
 
 </html>
