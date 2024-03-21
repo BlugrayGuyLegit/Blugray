@@ -3,7 +3,7 @@ name: Notify Discord on Update
 on:
   push:
     branches:
-      -  main # adjust this value based on the branch in your repository
+      - main
 
 jobs:
   notify_discord:
@@ -12,6 +12,15 @@ jobs:
     steps:
       - name: Send Discord notification
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} # Make sure to add this secret in your repository settings 
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": ""}' $DISCORD_WEBHOOK_URL
+          curl -X POST -H "Content-Type: application/json" -d '{
+            "embeds": [
+              {
+                "title": "Website Updated!",
+                "description": "The website is updated or online!",
+                "color": 3066993
+                "footer": "BlugrayGuy.com"
+              }
+            ]
+          }' $DISCORD_WEBHOOK_URL
