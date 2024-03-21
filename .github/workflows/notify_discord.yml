@@ -18,10 +18,10 @@ jobs:
             "embeds": [
               {
                 "title": "Website Updated!",
-                "title_url": "https://blugrayguylegit.github.io/Skibidi-toilet-community/"
+                "url": "https://blugrayguylegit.github.io/Skibidi-toilet-community/",
                 "description": "The website is updated or online!",
-                "color": 3066993
-                "footer": "BlugrayGuy.com"
+                "color": 3066993,
+                "footer": {"text": "BlugrayGuy.com"}
               }
             ]
           }' $DISCORD_WEBHOOK_URL
