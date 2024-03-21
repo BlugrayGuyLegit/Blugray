@@ -73,7 +73,7 @@ section h2 {
 
 /* Links */
 a {
-  color: #007bff;
+  color: royalblue;
   text-decoration: none;
 }
 
@@ -189,4 +189,11 @@ img#team {
 }
 .story b {
   text-decoration: underline yellow;
+}
+a#Redirect {
+  color: white;
+  font: italic "Shadded South" Fantasy;
+}
+a#Redirect:hover {
+  text-decoration: underline black;
 }
