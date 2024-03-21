@@ -3,7 +3,7 @@ name: Notify Discord on Update
 on:
   push:
     branches:
-      - main  # adjust this value based on the branch in your repository
+      -   # adjust this value based on the branch in your repository
 
 jobs:
   notify_discord:
