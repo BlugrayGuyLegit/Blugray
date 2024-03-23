@@ -18,3 +18,33 @@ document.addEventListener('DOMContentLoaded', function() {
   console.info({Name : 'Page open', Value : openPage, Info : 'If value = 1 = Page successful opened'})
   console.info({Name : 'Test (Page not open)', Value : openPageFalse, So : '2 = False'})
 });
+
+function search() {
+  var input = document.getElementById("searchInput").value.toLowerCase();
+  var pages = ["index.html", "72.html", "dtst.html", "summary.html", "mod-application.html", "storyline.html", "style.css", "mod.css", "ex.txt", "ex-sraw.js", "search.css", "blugray-console.html", "https://linktr.ee/blugray", 'https://youtube.com/@BlugrayGuy', 'https://youtube.com/Da'];
+  var results = [];
+
+  for (var i = 0; i < pages.length; i++) {
+    if (pages[i].toLowerCase().indexOf(input) > -1) {
+      results.push(pages[i]);
+    }
+  }
+
+  var resultsList = document.getElementById("resultsList");
+  resultsList.innerHTML = "";
+
+  if (results.length > 0) {
+    for (var j = 0; j < results.length; j++) {
+      var listItem = document.createElement("li");
+      var link = document.createElement("a");
+      link.href = results[j];
+      link.textContent = results[j];
+      listItem.appendChild(link);
+      resultsList.appendChild(listItem);
+    }
+    document.getElementById("searchResults").style.display = "block";
+  } else {
+    document.getElementById("searchResults").style.display = "none";
+    alert("No matches found for your search.");
+  }
+}
