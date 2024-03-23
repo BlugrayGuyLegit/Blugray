@@ -18,7 +18,7 @@ jobs:
             "embeds": [
               {
                 "title": "Website Updated!",
-                "url": "https://blugrayguylegit.github.io/blugray/",
+                "url": "https://blugrayguylegit.github.io/Blugray/",
                 "description": "The website is updated or online!",
                 "color": 3066993,
                 "footer": {"text": "BlugrayGuy.com"}
