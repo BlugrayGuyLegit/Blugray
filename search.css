@@ -3,6 +3,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-right: auto;
+    margin-left: auto;
+    width: 900px;
 }
 
 input[type="text"] {
@@ -27,3 +30,10 @@ button:hover {
   bottom: 0;
   left: 0;
 }
+
+  #resultsList {
+    max-height: auto;
+    overflow-y: auto;
+    border-left: 3px solid black;
+    padding-left: 1%;
+  }
