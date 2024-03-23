@@ -23,6 +23,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://media.discordapp.net/attachments/1169330015423430696/1214915589861281843/Picsart_24-03-06_13-40-27-453.png?ex=65fad950&is=65e86450&hm=1f83e09bbb221e9931b5e160795adbadb060cc652ce7e46c30b42e0b0f6036ab&">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
     <style>
     .warning-box {
       background-color: #ffe6e6;
@@ -56,7 +57,17 @@
       </ul>
     </nav>
   </header>
+  <section>
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Searcj...">
+  <button onclick="search()">Search 🔎</button>
+</div>
 
+<div id="searchResults" style="display: none;">
+  <h2>Search results :</h2>
+  <ul id="resultsList"></ul>
+</div>
+  </section>
   <main>
     <section class="information">
     <h2>Important Information ⚠️</h2>
