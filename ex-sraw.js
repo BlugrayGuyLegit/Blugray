@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function search() {
   var input = document.getElementById("searchInput").value.toLowerCase();
-  var pages = ["index.html", "72.html", "dtst.html", "summary.html", "mod-application.html", "storyline.html", "style.css", "mod.css", "ex.txt", "ex-sraw.js", "search.css", "Blugray-console.html", "https://linktr.ee/blugray", 'https://youtube.com/@BlugrayGuy', 'https://youtube.com/DaFuqBoom', 'https://google.com', 'https://github.com', 'README.md', 'LISCENCE'];
+  var pages = ["index.html", "72.html", "dtst.html", "summary.html", "mod-application.html", "storyline.html", "style.css", "mod.css", "ex.txt", "ex-sraw.js", "search.css", "Blugray-console.html", "https://linktr.ee/blugray", 'https://youtube.com/@BlugrayGuy', 'https://youtube.com/DaFuqBoom', 'https://google.com', 'https://github.com', 'README.md', 'LICENCE.md', 'security.md', 'wiki/index.md'];
   var results = [];
 
   for (var i = 0; i < pages.length; i++) {
