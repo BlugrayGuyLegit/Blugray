@@ -21,30 +21,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function search() {
   var input = document.getElementById("searchInput").value.toLowerCase();
-  var pages = ["index.html", "72.html", "dtst.html", "summary.html", "mod-application.html", "storyline.html", "style.css", "mod.css", "ex.txt", "ex-sraw.js", "search.css", "Blugray-console.html", "https://linktr.ee/blugray", 'https://youtube.com/@BlugrayGuy', 'https://youtube.com/DaFuqBoom', 'https://google.com', 'https://github.com', 'README.md', 'LICENCE.md', 'security.md', 'wiki/index.md', 'https://github.com/BlugrayGuyLegit/Blugray/new/main/wiki'];
-  var results = [];
+  var pages = ["index.html", "72.html", "dtst.html", "summary.html", "mod-application.html", "storyline.html", "style.css", "mod.css", "ex.txt", "ex-sraw.js", "search.css", "Blugray-console.html", "https://linktr.ee/blugray", 'https://youtube.com/@BlugrayGuy', 'https://youtube.com/DaFuqBoom', 'https://google.com', 'https://github.com', 'README.md', 'LICENCE.md', 'security.md', 'https://github.com/BlugrayGuyLegit/Blugray/new/main/wiki'];
+  var wikiPages = [];
 
-  for (var i = 0; i < pages.length; i++) {
-    if (pages[i].toLowerCase().indexOf(input) > -1) {
-      results.push(pages[i]);
+  fetch('https://api.github.com/repos/BlugrayGuyLegit/Blugray/contents/wiki')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error fetching data from GitHub API');
+      }
+      return response.json();
+    })
+    .then(data => {
+      wikiPages = data.map(file => file.path);
+      displayResults();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert("Error fetching data from GitHub API. Please try again later.");
+    });
+
+  function displayResults() {
+    var results = [];
+
+    for (var i = 0; i < pages.length; i++) {
+      if (pages[i].toLowerCase().indexOf(input) > -1) {
+        results.push(pages[i]);
+      }
     }
-  }
-
-  var resultsList = document.getElementById("resultsList");
-  resultsList.innerHTML = "";
-
-  if (results.length > 0) {
-    for (var j = 0; j < results.length; j++) {
-      var listItem = document.createElement("li");
-      var link = document.createElement("a");
-      link.href = results[j];
-      link.textContent = results[j];
-      listItem.appendChild(link);
-      resultsList.appendChild(listItem);
+    for (var j = 0; j < wikiPages.length; j++) {
+      if (wikiPages[j].toLowerCase().indexOf(input) > -1) {
+        results.push(wikiPages[j]);
+      }
     }
-    document.getElementById("searchResults").style.display = "block";
-  } else {
-    document.getElementById("searchResults").style.display = "none";
-    alert("No matches found for your search.");
+
+    var resultsList = document.getElementById("resultsList");
+    resultsList.innerHTML = "";
+
+    if (results.length > 0) {
+      for (var k = 0; k < results.length; k++) {
+        var listItem = document.createElement("li");
+        var link = document.createElement("a");
+        link.href = results[k];
+        link.textContent = results[k];
+        listItem.appendChild(link);
+        resultsList.appendChild(listItem);
+      }
+      document.getElementById("searchResults").style.display = "block";
+    } else {
+      document.getElementById("searchResults").style.display = "none";
+      alert("No matches found for your search.");
+    }
   }
 }
