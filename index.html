@@ -218,47 +218,6 @@ var slideIndex = 0;
         function connectWithDiscord() {
             
             window.location.href = 'https://discord.com/oauth2/authorize?client_id=1221431219217109024&response_type=code&redirect_uri=https%3A%2F%2Fblugrayguylegit.github.io%2FBlugray%2F&scope=identify+guilds.join+connections';
-            
-const express = require('express');
-const fetch = require('node-fetch');
-
-const app = express();
-
-const CLIENT_ID = '1221431219217109024';
-const CLIENT_SECRET = 'MTIyMTQzMTIxOTIxNzEwOTAyNA.GH--2U.7axYHRFvjby-lUrab2XADoakwyEtG3E5EzWJwY';
-const REDIRECT_URI = 'https://blugrayguylegit.github.io/Blugray/';
-const SERVER_INVITE_URL = 'https://discord.com/invite/vEhK8R2HBk';
-
-app.get('/discord/callback', async (req, res) => {
-    try {
-        const code = req.query.code;
-        const tokenResponse = await fetch('https://discord.com/api/oauth2/token', {
-            method: 'POST',
-            body: new URLSearchParams({
-                client_id: CLIENT_ID,
-                client_secret: CLIENT_SECRET,
-                grant_type: 'authorization_code',
-                code: code,
-                redirect_uri: REDIRECT_URI,
-                scope: 'identify'
-            }),
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        });
-        const tokenData = await tokenResponse.json();
-        
-      
-        res.redirect(SERVER_INVITE_URL);
-    } catch (error) {
-        console.error('redirect error:', error);
-        res.status(500).send('redirect error');
-    }
-});
-
-app.listen(3000, () => {
-    console.log('port 3000');
-});
         }
     </script>
 
