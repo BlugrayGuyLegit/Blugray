@@ -7,7 +7,7 @@
 
 /* Body styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   background-color: white;
   color: blue;
   line-height: 1.6;
@@ -21,20 +21,27 @@ body {
 /* Header styles */
 header {
   position: sticky;
-  background-color: royalblue;
+  background-image: linear-gradient(to 
+  bottom, darkblue, blue, darkblue);
   color: white;
   padding: 20px;
   text-align: center;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  border: 3px solid black;
   margin-right: auto;
     margin-left: auto;
     width: auto;
+  border-radius: 10px;
 }
 
 header h1 {
   font-size: 2rem;
   margin-bottom: 10px;
+  font-family: cursive;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
 }
 
 nav ul {
