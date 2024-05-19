@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>YouTube Player</title>
+<style>
+  button {
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+  }
+  input {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+  }
+</style>
+</head>
+<body>
+     <header>
+    <a href="index.html" id="Redirect"><h1>Skibidi Toilet Community - BlugrayGuy.com</h1></a>
+    <nav>
+      <ul>
+        <li><a href="https://linktr.ee/blugray">All Socials</a></li>
+        <li><a href="Blugray-console.html">Blugray Console</a></li>
+        <li><a href="summary.html">Skibidi Toilet Ep Summary</a></li>
+      </ul>
+    </nav>
+    </header>
+
+<iframe id="player" width="900" height="460" frameborder="0" allowfullscreen></iframe><br>
+
+
+<input type="text" id="youtubeLink" placeholder="Insert YouTube link here">
+<button id="loadButton">Load Video</button>
+
+
+<script>
+  document.getElementById("loadButton").addEventListener("click", loadVideo);
+  document.getElementById('loadButton').value = '';
+
+  function loadVideo() {
+    var youtubeLink = document.getElementById("youtubeLink").value;
+    var embedLink = convertToEmbedLink(youtubeLink);
+    if (embedLink) {
+      var player = document.getElementById("player");
+      player.src = embedLink;
+    }
+  }
+
+  function convertToEmbedLink(url) {
+    var videoId = '';
+    if (url.includes("youtube.com/watch?v=")) {
+      videoId = url.split('v=')[1];
+      var ampersandPosition = videoId.indexOf('&');
+      if (ampersandPosition !== -1) {
+        videoId = videoId.substring(0, ampersandPosition);
+      }
+      return "https://www.youtube.com/embed/" + videoId;
+    } else if (url.includes("youtu.be/")) {
+      videoId = url.split('youtu.be/')[1];
+      return "https://www.youtube.com/embed/" + videoId;
+    } else if (url.includes("youtube.com/live/")) {
+      videoId = url.split('live/')[1];
+      return "https://www.youtube.com/embed/live_stream?channel=" + videoId;
+    } else if (url.includes("youtube.com/shorts/")) {
+      videoId = url.split('shorts/')[1];
+      return "https://www.youtube.com/embed/" + videoId;
+    }
+    return null;
+  }
+</script>
+
+</body>
+</html>
