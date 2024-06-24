@@ -8,8 +8,8 @@
 /* Body styles */
 body {
   font-family: sans-serif;
-  background-color: white;
-  color: blue;
+  background-color: #3F182C;
+  color: white;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ body {
 header {
   position: sticky;
   background-image: linear-gradient(to 
-  bottom, darkblue, blue, darkblue);
+  bottom, darkblue, #3F185C);
   color: white;
   padding: 20px;
   text-align: center;
@@ -64,13 +64,13 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: #3F183D;
+  color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
-  color: black;
-  border: 2px solid black;
+  border: 2px solid forestgreen;
 }
 
 section h2 {
@@ -176,7 +176,7 @@ a:hover {
   text-decoration: bold;
 }
 section#about {
-  background-color: floralwhite;
+  background-color: #3F185C;
 }
 section#uptitle {
   color: darkblue;
@@ -206,7 +206,7 @@ a#Redirect:hover {
 }
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
+  border: 2px solid forestgreen;
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -220,7 +220,7 @@ caption {
 
 thead,
 tfoot {
-  background-color: rgb(228 240 245);
+  background-color: #3F186C;
 }
 
 th,
@@ -234,7 +234,7 @@ td:last-of-type {
 }
 
 tbody > tr:nth-of-type(even) {
-  background-color: rgb(237 238 242);
+  background-color: #3F187C;
 }
 
 tfoot th {
@@ -243,4 +243,4 @@ tfoot th {
 
 tfoot td {
   font-weight: bold;
-}
+  }
