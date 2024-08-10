@@ -7,31 +7,36 @@
 
 /* Body styles */
 body {
-  font-family: sans-serif;
-  background-color: midnightblue;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #101010;
   color: white;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  margin-right: auto;
-    margin-left: auto;
-    width: 900px;
+  margin: 0 auto;
+  width: 900px;
 }
 
 /* Header styles */
 header {
-  background-color: black;
+  background-color: #282828;
   color: white;
-  text-align: center;
-  border-bottom: 3px solid white;
-  border-top: 3px solid white;
-  border-radius: 10px;
+  text-align: left;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #404040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
   font-size: 2rem;
   margin-bottom: 10px;
-  font-family: cursive;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header a {
@@ -41,11 +46,8 @@ header a {
 
 nav ul {
   list-style-type: none;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
@@ -56,8 +58,10 @@ nav ul li a {
 /* Main content styles */
 main {
   padding: 20px;
+  padding-top: 80px; /* Adjust for fixed header */
 }
 
+/* Section styles */
 section {
   background-color: black;
   color: white;
@@ -73,6 +77,92 @@ section h2 {
   margin-bottom: 10px;
 }
 
+/* Details section styles */
+.details-section {
+  background-color: #282828;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 300px;
+}
+
+details summary {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #404040;
+  border-radius: 5px;
+  background-color: #383838;
+  color: white;
+  margin-bottom: 10px;
+}
+
+details[open] summary {
+  background-color: #505050;
+}
+
+.links {
+  padding: 10px;
+}
+
+.links a {
+  display: block;
+  color: royalblue;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Dialog styles */
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #282828;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #404040;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 90%;
+  max-height: 80%;
+  overflow: auto;
+  z-index: 1000;
+}
+
+dialog h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+dialog p {
+  margin-bottom: 20px;
+}
+
+dialog form {
+  text-align: center;
+}
+
+dialog button {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+dialog button:hover {
+  background-color: darkblue;
+}
+
 /* Links */
 a {
   color: royalblue;
@@ -83,127 +173,167 @@ a:hover {
   text-decoration: underline;
 }
 
-.slideshow {
-      position: relative;
-      max-width: 850px;
-      margin: auto;
-    }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 2500px;
+  min-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  left: -50px;
+}
 
-    .slide {
-      display: right;
-    }
+.mySlides {
+  display: none;
+}
 
-    .slide img {
-      width: 100%;
-      height: auto;
-      border: 3px solid black;
-      border-radius: 10px
-    }
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
-    .prose {
-      position: absolute;
-      bottom: 15px;
-      left: 5%;
-      text-align: left;
-      color: white;
-    }
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-    .prose h2 {
-      font-size: 24px;
-      margin: 0 0 10px;
-    }
+.prev:hover, .next:hover {
+  background-color: transparent;
+}
 
-    .prose p {
-      font-size: 18px;
-      margin: 0 0 20px;
-    }
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+}
 
-    .prose a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: transparent;
-      border: 3px solid white;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: background-color 0.3s ease;
-    }
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
-    .prose a:hover {
-      background-color: black;
-    }
-    iframe {
-      border: 3px solid blue;
-      border-radius: 10px;
-    }
-    .tie {
-      margin-right: auto;
-    margin-left: auto;
-    }
-    imgblacktie {
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.imgrad {
+  border: solid black 2px;
+  border-radius: 20px;
+}
+
+iframe {
+  border: 3px solid blue;
+  border-radius: 10px;
+}
+
+.tie {
+  margin: 0 auto;
+}
+
+imgblacktie {
   max-width: 300px;
   max-height: 350px;
   border: 3px solid black;
   border-radius: 10px;
   text-align: center;
 }
+
 .floating-video {
   position: fixed;
   bottom: 160px;
   right: 20px;
   z-index: 9999;
 }
-.tie h1 {
-  color: blue;
-  text-align: center;
-}
-.tie h2 {
+
+.tie h1, .tie h2, .tie p {
   color: blue;
   text-align: center;
   border: 2px solid black;
   border-radius: 50px;
 }
+
 .tie p {
-  color: blue;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 50px;
   text-decoration: bold;
 }
+
 sectionblackabout {
   background-color: darkslategray;
 }
+
 sectionblackuptitle {
   color: red;
 }
-imgblackteam {
-  max-width: 75px;
-  max-height: 75px;
+
+#team {
+  max-width: 40px;
+  max-height: 40px;
   border: 3px solid white;
-  border-radius: 10px;
+  border-radius: 30px;
   text-align: center;
 }
+
 .story h1 {
   border-bottom: 3px solid white;
-  margin-right: auto;
-    margin-left: auto;
-    width: auto;
+  margin: 0 auto;
+  width: auto;
 }
+
 .story b {
   text-decoration: underline blue;
 }
+
 ablackRedirect {
   color: white;
   font: italic "Shadded South" Fantasy;
 }
+
 ablackRedirect:hover {
   text-decoration: underline white;
 }
+
 table {
   border-collapse: collapse;
   border: 2px solid blue;
   font-family: sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.8 rem;
   letter-spacing: 1px;
 }
 
@@ -213,14 +343,12 @@ caption {
   font-weight: bold;
 }
 
-thead,
-tfoot {
+thead, tfoot {
   background-color: black;
 }
 
-th,
-td {
-  border: 1px solid rgb(160 160 160);
+th, td {
+  border: 1px solid rgb(160, 160, 160);
   padding: 8px 10px;
 }
 
@@ -238,9 +366,140 @@ tfoot th {
 
 tfoot td {
   font-weight: bold;
-  }
-  
+}
+
 #kkpng {
-    width: auto;
-    height: 50px;
+  width: auto;
+  height: 30px;
+}
+
+#line {
+  border-bottom: 3px solid white;
+  margin: 0 auto;
+  width: auto;
+}
+
+footer {
+  text-align: left;
+  padding: 5%;
+  margin: -5%;
+  background-color: transparent;
+  color: white;
+  width: auto;
+}
+
+/* Floating video */
+.floating-video {
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Image styles */
+.imgrad {
+  border: solid black 2px;
+  border-radius: 20px;
+}
+
+imgblacktie {
+  max-width: 300px;
+  max-height: 350px;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Tie styles */
+.tie h1, .tie h2, .tie p {
+  color: blue;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+
+.tie p {
+  font-weight: bold;
+}
+
+/* Section styles */
+sectionblackabout {
+  background-color: darkslategray;
+}
+
+sectionblackuptitle {
+  color: red;
+}
+
+/* Story styles */
+.story h1 {
+  border-bottom: 3px solid white;
+  margin: 0 auto;
+  width: auto;
+}
+
+.story b {
+  text-decoration: underline blue;
+}
+
+/* Redirect link styles */
+ablackRedirect {
+  color: white;
+  font: italic "Shadded South", Fantasy;
+}
+
+ablackRedirect:hover {
+  text-decoration: underline white;
+}
+
+
+/* Body styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #101010;
+  color: white;
+  line-height: 1.6;
+  margin: 0 auto;
+  width: 900px;
+}
+
+/* Footer styles */
+.footer-container {
+  background-color: #282828;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 3px solid #404040;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content img {
+  width: auto;
+  height: 30px;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0 0;
+}
+
+.footer-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-nav ul li a:hover {
+  color: royalblue;
+  text-decoration: underline;
 }
