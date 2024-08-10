@@ -15,8 +15,7 @@ var openPage = 1;
 var openPageFalse = 2;
 document.addEventListener('DOMContentLoaded', function() {
   console.info('open')
-  console.info({Name : 'Page open', Value : openPage, Info : 'If value = 1 = Page successful opened'})
-  console.info({Name : 'Test (Page not open)', Value : openPageFalse, So : '2 = False'})
+  console.info({Name : 'Page open', Value : openPage, Info : 'Welcome user to the KeamsOS console opened by the run of the page BlugrayGuy.com.'})
 });
 
 function search() {
