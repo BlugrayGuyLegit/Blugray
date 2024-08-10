@@ -1,29 +1,36 @@
 .search-container {
+  float: left;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin-top: 20px;
   margin-right: auto;
     margin-left: auto;
-    width: 900px;
+    width: 280px;
+    border: solid gray 1px;
+    border-radius: 20px;
 }
 
 input[type="text"] {
   padding: 8px;
   width: 200px;
-  border: 1px solid #ccc;
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+  background-color: transparent;
 }
 
 button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: transparent;
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: transparent;
 }
 .right {
   position: fixed;
