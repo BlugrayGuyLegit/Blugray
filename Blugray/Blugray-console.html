@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blugray Console</title>
+  <style>
+    body {
+      background-color: black;
+      color: limegreen;
+      font-family: Arial, sans-serif;
+    }
+    #console {
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div id="console"></div>
+
+  <script>
+    const consoleElement = document.getElementById('console');
+    const lines = [
+      " ________  ___       ___  ___  ________  ________  ________      ___    ___ ",
+      "|\\   __  \\|\\  \\     |\\  \\|\\  \\|\\   ____\\|\\   __  \\|\\   __  \\    |\\  \\  /  /|",
+      "\\ \\  \\|\\ /\\ \\  \\    \\ \\  \\\\\\  \\ \\  \\___|\\ \\  \\|\\  \\ \\  \\|\\  \\   \\ \\  \\/  / /",
+      " \\ \\   __  \\ \\  \\    \\ \\  \\\\\\  \\ \\  \\  __\\ \\   _  _\\ \\   __  \\   \\ \\    / / ",
+      "  \\ \\  \\|\\  \\ \\  \\____\\ \\  \\\\\\  \\ \\  \\|\\  \\ \\  \\\\  \\\\ \\  \\ \\  \\   \\/  /  /  ",
+      "   \\ \\_______\\ \\_______\\ \\_______\\ \\_______\\ \\__\\\\ _\\\\ \\__\\ \\__\\__/  / /    ",
+      "    \\|_______|\\|_______|\\|_______|\\|_______|\\|__|\\|__|\\|__|\\|__|\\___/ /     ",
+      "                                                               \\|___|/      ",
+      "> Blugray Console",
+      "> V74.0",
+      "",
+      "> Intraverse connection...",
+      "> Connection detected",
+      "> Connection attempt...",
+      "> Connection successful",
+      "   Blugray - Bleak moment",
+      "   Skibidi Toilet - Ending of an arc",
+      "   Skibidi toilet 77. 1 - Soon",
+      "   Final War - Astro Toilet final war soon...",
+      "   Titan - 4 Ready",
+      "   Temporal error -  code name: Back in time",
+      "   Dark Tie - Complete",
+      "",
+      "> Connected",
+      "[] Login as: Unknown User",
+      "",
+      "> Connected Channel:",
+      "[] http://youtube.com/@BlugrayGuy",
+      "[] https://youtube.com/@DaFuq!?Boom!",
+      "Plan: Protect"
+    ];
+
+    let lineIndex = 0;
+
+    function displayLine() {
+      if (lineIndex < lines.length) {
+        consoleElement.innerHTML += lines[lineIndex] + '\n';
+        lineIndex++;
+        setTimeout(displayLine, 100); // Change the delay as needed
+      }
+    }
+
+    displayLine();
+  </script>
+</body>
+</html>
