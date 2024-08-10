@@ -1,0 +1,1 @@
+{"Team Check":true,"Show FOV":false,"Tracers":true,"ESP":true,"Aim Part":"Head","Aim Key":"Touch","Aimbot":false}
