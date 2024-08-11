@@ -1,4 +1,4 @@
-// Hey you, if you looking for a secret code, there is nothing here ok! :)
+a// Hey you, if you looking for a secret code, there is nothing here ok! :)
 
 function warndel() {
   console.log('Info-alert executed');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function search() {
   var input = document.getElementById("searchInput").value.toLowerCase();
-  var pages = ["index.html", "72.html", "dtst.html", "summary.html", "mod-application.html", "storyline.html", "style.css", "mod.css", "ex.txt", "ex-sraw.js", "search.css", "Blugray-console.html", "https://linktr.ee/blugray", 'https://youtube.com/@BlugrayGuy', 'https://youtube.com/DaFuqBoom', 'https://google.com', 'https://github.com', 'README.md', 'LICENCE.md', 'security.md',];
+  var pages = ["index.html", "72.html", "dtst.html", "summary.html", "/blugray/blugray/mod-application.html", "storyline.html", "style.css", "mod.css", "ex.txt", "ex-sraw.js", "search.css", "Blugray-console.html", "https://linktr.ee/blugray", 'https://youtube.com/@BlugrayGuy', 'https://youtube.com/DaFuqBoom', 'https://google.com', 'https://github.com', 'README.md', 'LICENCE.md', 'security.md',];
   var wikiPages = [];
 
   fetch('https://api.github.com/repos/BlugrayGuyLegit/Blugray/contents/')
